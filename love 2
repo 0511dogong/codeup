@@ -1,0 +1,30 @@
+[문제 설명]
+영어 문장이 입력된다.
+
+그 문장에서 love가 몇 번 나오는지 출력하시오.
+
+[입력]
+영어 한 문장이 입력된다.(공백 있음, 최대 글자수 100)
+
+[출력]
+소문자 love가 몇 번 나오는지 출력한다.
+
+[입력 예시]
+love lovely
+
+[출력 예시]
+2
+
+# try 1.
+# score: 100%
+# time: 16
+# memory: 27724
+A = str(input())
+B = 0
+
+for i in range(len(A)):
+	C = A[i:4+i]
+	if len(C) >= 4 and C == "love":
+		B += 1
+
+print(B)
